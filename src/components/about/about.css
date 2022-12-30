@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#about-container {
+    width: 100%;
+}
+
+#text-container {
+    background-color: #cad2c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+#text-1 {
+    font-size: 1.7rem;
+    line-height: 2;
+}
+
+#text-2 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 1rem;
+}
+
+#profile-picture-container {
+    width: 100%;
+    background-color: #588157;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1rem;
+}
+
+#image-container {
+    background: url("../../assets/images/alex.jpg");
+    background-size: cover;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}

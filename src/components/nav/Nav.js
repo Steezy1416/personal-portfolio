@@ -2,6 +2,14 @@ import react from "react";
 import "./nav.css"
 
 export default function Nav() {
+
+    const navItems = [
+        { name: "About" },
+        { name: "Projects" },
+        { name: "Contact" },
+        { name: "Resume" }
+    ]
+
     return (
         <header>
             <div className="content-container">
@@ -9,10 +17,11 @@ export default function Nav() {
                 <p>&lt;Alex Fortin/&gt;</p>
 
                 <ul id="nav-container">
-                    <li className="nav-item">About</li>
-                    <li className="nav-item">Projects</li>
-                    <li className="nav-item">Contact</li>
-                    <li className="nav-item">Resume</li>
+                    {navItems.map(item => (
+                        <li className="nav-item"
+                            key={item.name}
+                        >{item.name}</li>
+                    ))}
                 </ul>
             </div>
         </header>
