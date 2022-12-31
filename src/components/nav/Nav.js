@@ -8,7 +8,7 @@ export default function Nav(props) {
     const switchComponent = (name) => {
         setCategory(name)
     }
-
+    
     return (
         <header>
             <div className="content-container">

@@ -16,15 +16,13 @@ function App() {
 
   return (
     <>
-      <Nav 
+      <Nav
         navItems={navItems}
         categorySelected={categorySelected}
         setCategory={setCategory}
       ></Nav>
-      {categorySelected === "About" && <About/>}
-      {categorySelected === "Projects" && <Portfolio/>}
-      {categorySelected === "About" && <About/>}
-      {categorySelected === "About" && <About/>}
+      {categorySelected === "About" && <About />}
+      {categorySelected === "Projects" && <Portfolio />}
     </>
   );
 }
