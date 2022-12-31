@@ -1,12 +1,13 @@
 import react from "react";
 import "./about.css"
-import Alex from "../../assets/images/alex.jpg"
+import Icon from "../../assets/images/icon.svg"
 
 export default function About() {
     return (
         <section id="about-container">
             <div id="text-container">
                 <p id="text-1">Hello 👋, <br/>My name is Alexander Fortin</p>
+                <div id="icon-container"></div>
                 <p id="text-2">I am a Web Developer who loves to create, and experiment with new technology 💻.</p>
             </div>
 
