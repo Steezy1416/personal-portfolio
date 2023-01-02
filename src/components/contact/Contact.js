@@ -1,7 +1,53 @@
-import react from "react";
+import react, { useState } from "react";
 import "./contact.css"
 
 export default function Contact() {
+
+    const [formState, setFormState] = useState({ name: "", email: "", message: "" })
+
+    const [errorMessage, setErrorMessage] = useState("")
+
+    const { name, email, message } = formState
+
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function handleChange(e) {
+        if (e.target.name === "email") {
+            const isValid = validateEmail(e.target.value)
+            if (!isValid) {
+                setErrorMessage("Your email is invalid")
+                e.target.style.borderBottom = "1px solid red"
+            }
+            else {
+                setErrorMessage("")
+                e.target.style.borderBottom = "1px solid gray"
+            }
+        }
+        else {
+            if (!e.target.value.length) {
+                setErrorMessage(`${e.target.name} is required`)
+                e.target.style.borderBottom = "1px solid red"
+
+            }
+            else {
+                setErrorMessage("")
+                e.target.style.borderBottom = "1px solid gray"
+            }
+        }
+        if (!errorMessage) {
+            setFormState({ ...formState, [e.target.name]: e.target.value })
+        }
+
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        console.log(formState)
+    }
+
     return (
         <div id="contact-container">
             <p id="contact-title">Contact Me!</p>
@@ -10,21 +56,27 @@ export default function Contact() {
 
             <div id="contact-icon-container"></div>
 
-            <form id="contact-form">
+            {errorMessage && (
+                <div>
+                    <p id="error-message">{errorMessage}</p>
+                </div>
+            )}
+
+            <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="input-container">
                     <label className="contact-label" for="name">Name</label>
-                    <input className="contact-input" name="name" placeholder="Enter your name" />
+                    <input className="contact-input" name="name" defaultValue={name} onBlur={handleChange} placeholder="Enter your name" />
                 </div>
                 <div className="input-container">
                     <label className="contact-label" for="email">Email Address</label>
-                    <input className="contact-input" name="email" placeholder="Enter your email address" />
+                    <input type="email" className="contact-input" name="email" defaultValue={email} onBlur={handleChange} placeholder="Enter your email address" />
                 </div>
                 <div className="input-container">
                     <label className="contact-label" for="message">Message</label>
-                    <textarea id="contact-textarea" className="contact-input" name="message" placeholder="Enter your message..." />
+                    <textarea id="contact-textarea" className="contact-input" name="message" defaultValue={message} onBlur={handleChange} placeholder="Enter your message..." />
                 </div>
                 <div className="input-container">
-                    <button id="contactBtn" type="submit">Send <i class="fa-regular fa-paper-plane"></i></button>
+                    <button id="contactBtn" className="hide" type="submit">Send <i class="fa-regular fa-paper-plane"></i></button>
                 </div>
             </form>
         </div>
