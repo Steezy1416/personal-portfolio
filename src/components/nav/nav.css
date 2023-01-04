@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #dad7cd;
+    background-color: #333;
 }
 
 header {
@@ -33,5 +33,17 @@ header {
 @media only screen and (min-width: 768px) {
     .nav-item{
         margin: 1rem;
+        font-size: 1rem;
+        color: lightgrey;
+    }
+
+    .name-item {
+        font-size: 1rem;
+    }
+
+    .nav-item:hover{
+        color: black;
+        background-color: lightblue;
+        border-radius: 10px;
     }
 }

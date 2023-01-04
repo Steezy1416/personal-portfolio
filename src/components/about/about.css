@@ -8,6 +8,10 @@
     width: 100%;
 }
 
+.highlight {
+    color: lightgreen;
+}
+
 #icon-container {
     background: url("../../assets/images/icon.svg");
     background-size: cover;
@@ -20,13 +24,14 @@
 }
 
 #text-container {
-    background-color: #dad7cd;
+    background-color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     margin: 5rem 0;
+    color: white;
 }
 
 #text-1 {

@@ -13,7 +13,7 @@ export default function Nav(props) {
         <header>
             <div className="content-container">
 
-                <p>&lt;Alex Fortin/&gt;</p>
+                <p className="name-item">&lt;Alex Fortin/&gt;</p>
 
                 <ul id="nav-container">
                     {navItems.map(item => (

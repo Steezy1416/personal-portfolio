@@ -19,22 +19,22 @@ export default function Contact() {
             const isValid = validateEmail(e.target.value)
             if (!isValid) {
                 setErrorMessage("Your email is invalid")
-                e.target.style.borderBottom = "1px solid red"
+                e.target.style.border = "2px solid red"
             }
             else {
                 setErrorMessage("")
-                e.target.style.borderBottom = "1px solid gray"
+                e.target.style.border = "2px solid lightgreen"
             }
         }
         else {
             if (!e.target.value.length) {
                 setErrorMessage(`${e.target.name} is required`)
-                e.target.style.borderBottom = "1px solid red"
+                e.target.style.border = "2px solid red"
 
             }
             else {
                 setErrorMessage("")
-                e.target.style.borderBottom = "1px solid gray"
+                e.target.style.border = "2px solid lightgreen"
             }
         }
         if (!errorMessage) {
@@ -65,18 +65,18 @@ export default function Contact() {
             <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="input-container">
                     <label className="contact-label" for="name">Name</label>
-                    <input className="contact-input" name="name" defaultValue={name} onBlur={handleChange} placeholder="Enter your name" />
+                    <input className="contact-input" autoComplete="off" name="name" defaultValue={name} onBlur={handleChange} placeholder="Enter your name" />
                 </div>
                 <div className="input-container">
                     <label className="contact-label" for="email">Email Address</label>
-                    <input type="email" className="contact-input" name="email" defaultValue={email} onBlur={handleChange} placeholder="Enter your email address" />
+                    <input type="email" autoComplete="off" className="contact-input" name="email" defaultValue={email} onBlur={handleChange} placeholder="Enter your email address" />
                 </div>
                 <div className="input-container">
                     <label className="contact-label" for="message">Message</label>
                     <textarea id="contact-textarea" className="contact-input" name="message" defaultValue={message} onBlur={handleChange} placeholder="Enter your message..." />
                 </div>
                 <div className="input-container">
-                    <button id="contactBtn" className="hide" type="submit">Send <i class="fa-regular fa-paper-plane"></i></button>
+                    <button id="contactBtn" type="submit">Send <i class="fa-regular fa-paper-plane"></i></button>
                 </div>
             </form>
         </div>
