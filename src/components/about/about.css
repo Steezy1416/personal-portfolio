@@ -6,10 +6,16 @@
 
 #about-container {
     width: 100%;
+    box-shadow: 0px 0px -11rem 0px black;
 }
 
 .highlight {
     color: lightgreen;
+}
+
+.highlight:hover {
+    color: rgb(0, 255, 0);
+    border-bottom: 1px solid white;
 }
 
 #icon-container {
