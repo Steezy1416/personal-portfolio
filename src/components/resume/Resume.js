@@ -26,7 +26,7 @@ export default function Resume() {
     return (
         <div id="resume-container">
 
-            <p id="resume-title">Here are some of the technologies I have been using recently</p>
+            <p id="resume-title">Here are some of the <span className="highlight">technologies</span> I have been using recently</p>
 
             <div id="resume-content-container">
             <div className="tech-container">

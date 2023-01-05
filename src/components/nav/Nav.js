@@ -40,7 +40,7 @@ export default function Nav(props) {
         <header>
             <div className="content-container">
 
-                <p className="name-item">&lt;Alex Fortin/&gt;</p>
+                <p className="name-item"><span className="highlight">&lt;</span>Alex Fortin<span className="highlight">/&gt;</span></p>
 
                 <ul id="nav-container">
                     {navItems.map(item => (
