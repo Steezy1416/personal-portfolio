@@ -26,6 +26,10 @@
     height: 20rem;
 }
 
+#contact-icon-container:hover {
+    background: url("../../assets/images/contactHover.svg");
+}
+
 #error-message {
     color: black;
 }
