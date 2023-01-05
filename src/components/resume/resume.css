@@ -61,7 +61,8 @@
   padding: .3rem;  
   border-radius: 10px;
   border: none;
-  background-color: #a3b18a;
+  background-color: tomato;
+  box-shadow: 0 0 1rem 0 black;
 }
 
 #resume-btn:hover {

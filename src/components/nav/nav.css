@@ -35,16 +35,16 @@ header {
     .nav-item{
         margin: 1rem;
         font-size: 1rem;
-        color: lightgrey;
+        color: white
     }
 
     .name-item {
         font-size: 1rem;
     }
 
-    .nav-item:hover{
-        color: black;
-        background-color: lightblue;
-        border-radius: 10px;
+    .nav-item:hover {
+        color: white;
+        background-color: black;
+        border-radius: 15px;
     }
 }
