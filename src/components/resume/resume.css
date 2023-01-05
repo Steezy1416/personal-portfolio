@@ -27,6 +27,10 @@
     font-size: 1rem;
 }
 
+.tech-container:hover {
+    background-color: white;
+}
+
 .resume-list {
     list-style: none;
     line-height: 1.5;

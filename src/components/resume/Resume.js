@@ -1,5 +1,6 @@
 import react from "react";
 import "./resume.css"
+import resume from "../../assets/resume/react-resume.docx"
 
 export default function Resume() {
 
@@ -39,7 +40,7 @@ export default function Resume() {
 
             <div id="icon-btn-container">
                 <div id="resume-icon-container"></div>
-                <button id="resume-btn">Download Resume</button>
+                <a href={resume} download="resume"><button id="resume-btn">Download Resume</button></a>
             </div>
 
 
