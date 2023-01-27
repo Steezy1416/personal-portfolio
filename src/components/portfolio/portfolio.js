@@ -4,7 +4,7 @@ import movieTime from "../../assets/images/movieTime.png"
 import weatherDash from "../../assets/images/weatherDash.png"
 import quiz from "../../assets/images/quiz.png"
 import studyGuide from "../../assets/images/studyGuide.png"
-import workDaySchedule from "../../assets/images/workDaySchedule.png"
+import brickstreet from "../../assets/images/brickstreet.png"
 import "./portfolio.css"
 
 
@@ -42,9 +42,9 @@ export default function Portfolio() {
         },
         {
             name: "Work Day Schedule",
-            repo: "https://github.com/Steezy1416/Work-Day-Scheduler",
-            deployed: "https://steezy1416.github.io/Work-Day-Scheduler/",
-            image: workDaySchedule
+            repo: "https://github.com/Steezy1416/brickstreet",
+            deployed: "https://brickstreet.herokuapp.com/",
+            image: brickstreet
         },
     ]
 
