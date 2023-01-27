@@ -41,7 +41,7 @@ export default function Portfolio() {
             image: studyGuide
         },
         {
-            name: "Work Day Schedule",
+            name: "BrickStreet",
             repo: "https://github.com/Steezy1416/brickstreet",
             deployed: "https://brickstreet.herokuapp.com/",
             image: brickstreet
